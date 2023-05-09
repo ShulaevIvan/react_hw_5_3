@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/Collapse/Collapse.css';
+import Collapse from './components/Collapse/Collapse';
 
 function App() {
+
+  const params = {
+    collapsedLabel: 'Развернуть',
+    expandedLabel: 'Свернуть',
+    text: 'Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.'
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <Collapse {...params}></Collapse>
+      {/* <Collapse></Collapse>
+      <Collapse {...params}></Collapse> */}
     </div>
   );
 }
